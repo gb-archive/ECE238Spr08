@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>ECE238Spr08/tutorials/GameBoyMusic(.MOD-&gt;Assembly) - CRATEL Wiki</title>
+<script type="text/javascript" src="/wiki/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/wiki/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/wiki/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/wiki/modern/css/projection.css">
+
+<!-- css only for MSIE browsers -->
+<!--[if IE]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/msie.css">
+<![endif]-->
+
+
+
+<link rel="Start" href="/cratel/cratel">
+<link rel="Alternate" title="Wiki Markup" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=print">
+<link rel="Up" href="/cratel/ECE238Spr08/tutorials">
+<link rel="Appendix" title="AlfGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=AlfGB.mp3">
+<link rel="Appendix" title="BoogieGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=BoogieGB.mp3">
+<link rel="Appendix" title="MariolandGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=MariolandGB.mp3">
+<link rel="Appendix" title="MusicPackage2.zip" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=MusicPackage2.zip">
+<link rel="Appendix" title="Playerfile3.asm" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=Playerfile3.asm">
+<link rel="Appendix" title="PopcornGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=PopcornGB.mp3">
+<link rel="Appendix" title="RideGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=RideGB.mp3">
+<link rel="Appendix" title="StarTrekGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=StarTrekGB.mp3">
+<link rel="Appendix" title="SuperMarioGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=SuperMarioGB.mp3">
+<link rel="Appendix" title="Tictacorder.inc" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=Tictacorder.inc">
+<link rel="Appendix" title="between2watersGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=between2watersGB.mp3">
+<link rel="Appendix" title="examplesong.asm" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=examplesong.asm">
+<link rel="Appendix" title="fastquestGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=fastquestGB.mp3">
+<link rel="Appendix" title="music.inc" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=music.inc">
+<link rel="Search" href="/cratel/FindPage">
+<link rel="Index" href="/cratel/TitleIndex">
+<link rel="Glossary" href="/cratel/WordIndex">
+<link rel="Help" href="/cratel/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/cratel/cratel"><img src="/wiki/common/cratel-old-logo.png" alt="CRATEL logo"></a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a href="/cratel/ECE238Spr08">ECE238Spr08</a></li><li><a href="/cratel/ECE238Spr08/tutorials">tutorials</a></li><li><a class="backlink" title="Click to do a full-text search for this title" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=fullsearch&amp;value=linkto%3A%22ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29%22&amp;context=180">GameBoyMusic(.MOD-&gt;Assembly)</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/cratel/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/cratel/FindPage">FindPage</a></li><li class="wikilink"><a href="/cratel/HelpContents">HelpContents</a></li><li class="current"><a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29">GameBoyMusi...-&gt;Assembly)</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=info">Info</a></li><li><a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="EmailActivation">Email Activation</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h1 id="head-268c21b5d3dcb18b14087ff09464a315b81062af">.Mod to Gameboy Music Conversions</h1>
+<span class="anchor" id="line-2"></span><p class="line874">By Thomas Engdahl ***Under Construction***(But has a start and a finish) <span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><p class="line874">This page will have tutorials on: <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><p class="line862">Finding, creating, transposing .mod files for GameBoy music. <span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li><a href="#head-268c21b5d3dcb18b14087ff09464a315b81062af">.Mod to Gameboy Music Conversions</a><ol><li><a href="#head-a4337a0abc3a768fae6e60d1a40e2ca4bc3f1145">About .Mod Files</a><ol><li><a href="#head-85807caee8930378dcd1d15e436c9498bcc5a605">Getting .Mod Files</a></li><li><a href="#head-f001f0d038e3e9537081cbd442157f31d5444986">Understanding .Mod Files</a></li></ol><li><a href="#head-b8562094848321acd342786d980c797ca301a1d8">Making An Order Table</a></li><li><a href="#head-f67cb268baab26bd2dc42e1e4a3a359f15d21e00">The Player File</a></li><li><a href="#head-6097d5d9bbcd3048268b7ff50fe3497c2d00036f">A Musical Function Include File</a></li><li><a href="#head-0af87e0e80e529ec3c47adab86243a8bd3c442a3">Editing Your Main Code for Music</a></li><li><a href="#head-800dc348c213181bc7dfb2d9c2ae96ccc9372d4d">Overview</a></li><li><a href="#head-50c2756e28feca3fd450c0a1f1db040c495c1348">Remarks and Examples</a></li></ol></li></ol></div> <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line867"><hr class="hr6" /><p class="line874"> <span class="anchor" id="line-11"></span>
+<h2 id="head-a4337a0abc3a768fae6e60d1a40e2ca4bc3f1145">About .Mod Files</h2>
+<span class="anchor" id="line-12"></span><p class="line867">
+<h3 id="head-85807caee8930378dcd1d15e436c9498bcc5a605">Getting .Mod Files</h3>
+<span class="anchor" id="line-13"></span><ul><li style="list-style-type:none"><p class="line862">You will need the mod tracker. You can get this from <a class="http" href="http://www.modplug.com/">http://www.modplug.com/</a> <span class="anchor" id="line-14"></span></li></ul><p class="line862">A good place to get mod files. <a class="http" href="http://modarchive.org/">http://modarchive.org/</a> <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><p class="line867">
+<h3 id="head-f001f0d038e3e9537081cbd442157f31d5444986">Understanding .Mod Files</h3>
+<span class="anchor" id="line-17"></span><p class="line874">Use the mod tracker to  edit and look at .mod files. Make sure there are 4 channels. These channels correspond to the 4 sound circuits in the game boy. The conversion will only care about the note pitches, instrument number, and volume. All other effects will be lost in the conversion. <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><p class="line862">=== The Conversion == Once a song is ready to be converted use the <a class="http" href="http://www.fortunecity.com/banners/interstitial.html?http://members.fortunecity.com/lemon26/Mod2lp1(dos).zip">mod2lp.exe</a> file to convert the mod file into an assembly language ready table. You can get it here under projects: <a class="http" href="http://members.fortunecity.com/lemon26/">http://members.fortunecity.com/lemon26/</a> <span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><p class="line874">To use the mod2lp.exe file place the exe and the mod file in the same folder. Then go into dos and goto the directory. Then type "mod2lp -a 'filename' " That will convert your mod file into a file "songname".inc (make sure to inspect your file, the converter likes to remove pattern 0) <span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><p class="line867"><hr class="hr6" /><p class="line874"> <span class="anchor" id="line-24"></span>
+<h2 id="head-b8562094848321acd342786d980c797ca301a1d8">Making An Order Table</h2>
+<span class="anchor" id="line-25"></span><ul><li style="list-style-type:none">Now you will need an order table. Here is an example. Tictacorder.INC <span class="anchor" id="line-26"></span></li></ul><p class="line867"><a class="attachment" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=Tictacorder.inc" title="attachment:Tictacorder.inc">Tictacorder.inc</a> <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><p class="line874">This file defines what order the music patterns are played in the mod file and can also be used to define where songs start with labels. If you watch the mod files play in the mod tracker you will notice that it will play 64 steps then goto the next pattern. The row of numbers it plays though are the patterns. Each pattern has 64 steps of unique data and can be played or repeated in any order. <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><p class="line867"><hr class="hr6" /><p class="line874"> <span class="anchor" id="line-31"></span>
+<h2 id="head-f67cb268baab26bd2dc42e1e4a3a359f15d21e00">The Player File</h2>
+<span class="anchor" id="line-32"></span><ul><li style="list-style-type:none">Here is the player file. You will need to edit the global values on the top and then include this in your main game file. <span class="anchor" id="line-33"></span></li><li style="list-style-type:none">Edit the global tempo,steps per pattern, and total number of patterns. Also the function just below will allow you to swap channels aka route mod channel X to gameboy sound circuit Y. Say your drum stuff in the mod file is in channel 2, then you would want to move that channel to voice 3(0-3) which is the noise circuit. Then you would call voice 3 after you load A register with 1(again the offset,1=channel2). <span class="anchor" id="line-34"></span></li></ul><p class="line867"><a class="attachment" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=Playerfile3.asm" title="attachment:Playerfile3.asm">Playerfile3.asm</a> <span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><p class="line867">
+<h2 id="head-6097d5d9bbcd3048268b7ff50fe3497c2d00036f">A Musical Function Include File</h2>
+<span class="anchor" id="line-37"></span><ul><li style="list-style-type:none">Here is an include file I created for the player. There is a sound interrupt macro that works with the player to make sure sound effects are not affected by the music. Look at the 2 sound effects defined in the include file. Before the sound is sent to the sound circuit, call the  "setchint \1" macro where 1 is the channel your sound will be. The set and release music interrupt pauses the music. There is also a change song macro which could easily be used or converted for a change tempo macro. <span class="anchor" id="line-38"></span></li></ul><p class="line867"><a class="attachment" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=music.inc" title="attachment:music.inc">music.inc</a> <span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><p class="line867"><hr class="hr6" /><p class="line874"> <span class="anchor" id="line-41"></span>
+<h2 id="head-0af87e0e80e529ec3c47adab86243a8bd3c442a3">Editing Your Main Code for Music</h2>
+<span class="anchor" id="line-42"></span><ul><li style="list-style-type:none">Next you will need to include the music table, order, player, and music files into your game. Also you will need to include the lemon_play call in the vblank interrupt. Here is an example with comments. <span class="anchor" id="line-43"></span></li></ul><p class="line867"><a class="attachment" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=examplesong.asm" title="attachment:examplesong.asm">examplesong.asm</a> <span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><ul><li style="list-style-type:none">There are some other considerations you must make before you use the lemon player code as I have realized when helping Adam add music to his code. Make sure you enable the V_blank interrupt and turn it on AFTER you have loaded your tile data otherwise the graphics will halt. Also you will need to call "lemon_init" during your initialization process in order to initialize the lemon player (so the song will start at the beginning). Yet another thing to look out for; the Lemon player variables start at $D000, the beginning of that ram sector. If you have make variables there you will need to move your variables or move the variables of the lemon player by editing the section at the very bottom of the player file where the variable section is defined. <span class="anchor" id="line-46"></span></li></ul><p class="line874">After making these changes in Adam's game he was able to get the music going no problem. <span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><p class="line867"><hr class="hr6" /><p class="line874"> <span class="anchor" id="line-49"></span>
+<h2 id="head-800dc348c213181bc7dfb2d9c2ae96ccc9372d4d">Overview</h2>
+<span class="anchor" id="line-50"></span><p class="line874">Mod to lp1. This creates "songname".inc from mod file. This is music data for $4000 section <span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><p class="line874">Create an "songname"order.inc to tell the player the order the patterns should be played in. Add labels where you want songs to start or if you want to jump to that position in a song. <span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><p class="line874">Condition your player file: Pick the default tempo, total number of patterns, steps in a pattern (default is 64). Also use voice order function on top to pick where which mod channel goes to which gameboy sound circuit. <span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><ul><li style="list-style-type:none">Condition your main code file. Make sure to include the music macros if you want sound effect interrupts etc. Make sure to call the lemon_play in the vblank (Use my function to be safe and push all your registers b4 you do it, which is done in the function) Make sure to include the player file. Make sure to add the "songname"inc and "songname"order.inc in the $4000 section of your code. <span class="anchor" id="line-57"></span></li></ul><p class="line874">Assemble the code and enjoy music! <span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><p class="line867"><hr class="hr6" /><p class="line874"> <span class="anchor" id="line-60"></span>
+<h2 id="head-50c2756e28feca3fd450c0a1f1db040c495c1348">Remarks and Examples</h2>
+<span class="anchor" id="line-61"></span><ul><li style="list-style-type:none">Hope this helps you out. I know this was brief but it should get you mostly through the process. The hardest part I think for the beginner is getting the mod file the way you want it. I recommend making a mod file from scratch. Make row row your boat and see how it reacts to the player. There are a lot of issues that arise with trying to convert an already made mod file from the internet to the gameboy. I have an advantage there because I already know mod files fairly well. I am going to post this zip file. It has the left over materials from making songs. <span class="anchor" id="line-62"></span></li></ul><p class="line874">There should be in each folder <span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><p class="line874">1.original mod <span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><p class="line874">2.edited mod for mod2lp1 ("modname"ed.mod) <span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><p class="line874">3."songname".inc <span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><p class="line874">4."songname"order.inc   (you can really just name this anything, I put the word order to keep track. <span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><p class="line874">5.A custom player file. (not the playerT3 linked above) <span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><p class="line874">6.A source file that is designed just to play music only. "songname"song.asm <span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><p class="line874">7.The assembled source just to test song. "songname"song.gb <span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><ul><li style="list-style-type:none"><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=MusicPackage2.zip" title="attachment:MusicPackage2.zip">MusicPackage2.zip</a> <span class="anchor" id="line-79"></span></li></ul><p class="line874">Enjoy and try to use these files to get familiar with how things will sound. <span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><p class="line874">You can listen to some of the songs in the music package as Mp3's here on my Blog: <span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><p class="line867"><a class="http" href="http://cratel.wichita.edu/blogs/tgeegt/2008/05/07/gameboy-music/">http://cratel.wichita.edu/blogs/tgeegt/2008/05/07/gameboy-music/</a> <span class="anchor" id="line-84"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">ECE238Spr08/tutorials/GameBoyMusic(.MOD-&gt;Assembly)  (last edited 2008-05-07 01:00:03 by <span title="ThomasEngdahl @ ip68-102-139-178.ks.ok.cox.net[68.102.139.178]"><a href="/cratel/ThomasEngdahl" title="ThomasEngdahl @ ip68-102-139-178.ks.ok.cox.net[68.102.139.178]">ThomasEngdahl</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=info">Info</a></li><li><a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="EmailActivation">Email Activation</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

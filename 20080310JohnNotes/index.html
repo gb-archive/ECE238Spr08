@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>ECE238Spr08/20080310JohnNotes - CRATEL Wiki</title>
+<script type="text/javascript" src="/wiki/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/wiki/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/wiki/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/wiki/modern/css/projection.css">
+
+<!-- css only for MSIE browsers -->
+<!--[if IE]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/msie.css">
+<![endif]-->
+
+
+
+<link rel="Start" href="/cratel/cratel">
+<link rel="Alternate" title="Wiki Markup" href="/cratel/ECE238Spr08/20080310JohnNotes?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/cratel/ECE238Spr08/20080310JohnNotes?action=print">
+<link rel="Up" href="/cratel/ECE238Spr08">
+<link rel="Search" href="/cratel/FindPage">
+<link rel="Index" href="/cratel/TitleIndex">
+<link rel="Glossary" href="/cratel/WordIndex">
+<link rel="Help" href="/cratel/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/cratel/cratel"><img src="/wiki/common/cratel-old-logo.png" alt="CRATEL logo"></a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/cratel/ECE238Spr08/20080310JohnNotes?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a href="/cratel/ECE238Spr08">ECE238Spr08</a></li><li><a class="backlink" title="Click to do a full-text search for this title" href="/cratel/ECE238Spr08/20080310JohnNotes?action=fullsearch&amp;value=linkto%3A%22ECE238Spr08/20080310JohnNotes%22&amp;context=180">20080310JohnNotes</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/cratel/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/cratel/FindPage">FindPage</a></li><li class="wikilink"><a href="/cratel/HelpContents">HelpContents</a></li><li class="current"><a href="/cratel/ECE238Spr08/20080310JohnNotes">20080310JohnNotes</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/cratel/ECE238Spr08/20080310JohnNotes?action=info">Info</a></li><li><a href="/cratel/ECE238Spr08/20080310JohnNotes?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="EmailActivation">Email Activation</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h1 id="head-9f4f6f492df42a85bb1a486dbc94878c38ec6e16">Instructor Notes</h1>
+<span class="anchor" id="line-2"></span><p class="line867"><em>March 10, 2008</em> <span class="anchor" id="line-3"></span><hr /><p class="line874"> <span class="anchor" id="line-4"></span>
+<h2 id="head-e54b104e79d69582e324e44566571382a6bf1352">Assignment Reminders</h2>
+<span class="anchor" id="line-5"></span><ul><li>Initial Project Proposal was do yesterday at midnight <span class="anchor" id="line-6"></span></li><li>Midterm: March 12 <span class="anchor" id="line-7"></span></li><li>Hello Noise: March 25th <span class="anchor" id="line-8"></span><ul><li>focus on sound effects for the games <span class="anchor" id="line-9"></span></li></ul></li></ul><p class="line867">
+<h2 id="head-090fe26459d8adfed16caaa52e64ba63ae4862df">midterm review</h2>
+<span class="anchor" id="line-10"></span><ul><li>DAA <span class="anchor" id="line-11"></span></li><li><p class="line862">JR. Example: <span class="anchor" id="line-12"></span><pre>Mem Loc     Hex            Op Code
+<span class="anchor" id="line-13"></span>0351        18 01          JR $0354
+<span class="anchor" id="line-14"></span>0353        00             NOP
+<span class="anchor" id="line-15"></span>0354 </pre><span class="anchor" id="line-16"></span></li><li>indirect addressing <span class="anchor" id="line-17"></span></li><li>EQU, db <span class="anchor" id="line-18"></span></li><li>review of the generic qualities of labels <span class="anchor" id="line-19"></span></li><li>jp [hl] <span class="anchor" id="line-20"></span></li><li>ldi a,[hl] = ld a,[hl+] <span class="anchor" id="line-21"></span></li><li>ldh vs. ld <span class="anchor" id="line-22"></span></li><li>bit, set, reset, shifts and rotates (see upper right hand corner crib sheet page 1. <span class="anchor" id="line-23"></span></li><li>carry flag <span class="anchor" id="line-24"></span></li><li>bit mask <span class="anchor" id="line-25"></span></li><li>T states and M cycles <span class="anchor" id="line-26"></span></li></ul><p class="line867">
+<h2 id="head-49c99cc2385cf0242cf99e79d6da600ae139f7db">Test Questions</h2>
+<span class="anchor" id="line-27"></span><ol type="1"><li>Write something that will do a simple task. <span class="anchor" id="line-28"></span><ul><li>I give you all the comments but not the opcodes <span class="anchor" id="line-29"></span></li><li>make sure you understand how the tiles relate to ASCII for this one <span class="anchor" id="line-30"></span></li><li>uses DAA <span class="anchor" id="line-31"></span></li><li>understand swap, bit masks <span class="anchor" id="line-32"></span></li></ul></li><li>hand-assemble some code. <span class="anchor" id="line-33"></span></li><li>calculate how long something takes to execute <span class="anchor" id="line-34"></span><ul><li>understand the distinction between T states and M cycles. <span class="anchor" id="line-35"></span></li><li><p class="line862">Know how to read the GameBoy crib sheet for this information <span class="anchor" id="line-36"></span></li></ul></li><li>Write a simple routine to do simple 16-bit integer arithmetic <span class="anchor" id="line-37"></span></li><li>Show you understand the distinctions of labels, EQU, DB, etc. <span class="anchor" id="line-38"></span><ul><li>You will be given two very small snippets of code and asked if they perform their intended function. <span class="anchor" id="line-39"></span></li></ul></li><li>Verbatim from the exam: <span class="anchor" id="line-40"></span><ul><li style="list-style-type:none"><p class="line891"><tt>hello-broken.asm</tt> is <tt>hello-sprite.asm</tt> with some lines changed from the original and shown in <strong>bold</strong>. <span class="anchor" id="line-41"></span><ul><li>Compare hello-broken.asm with hello-sprite.asm. For each changed line, write if the altered code will still operate with the same functionality as the original. <span class="anchor" id="line-42"></span></li><li>If the altered line breaks the code or significantly alters its functionality, explain why. If the altered line does not significantly change the functionality, explain why not. <span class="anchor" id="line-43"></span></li><li>Show in your answers that you understand the functionality of both the original and the altered lines. An example correct response for a specific line might be “This line breaks the code. We need to load register a into the contents of the memory location pointed to by 16-bit register pair hl, rather than the value of register hl itself.” In contrast, a correct observation but incorrect response would be “line should read ld [hl],a instead of ld hl,a.” This latter response does not show that you understand the function of the original code and the function of the altered code. <span class="anchor" id="line-44"></span></li></ul></li></ul></li><li><p class="line862">Construct a simple macro. I give you <tt>hello-sprite.inc</tt> to remind you of macro syntax <span class="anchor" id="line-45"></span></li></ol><p class="line867">
+<h2 id="head-99f5bdf1c887f5efaea61b4f056e4ccf32751232">Questions you might have</h2>
+<span class="anchor" id="line-46"></span><ul><li>Ascii and tile maps <span class="anchor" id="line-47"></span></li><li>hand assembly <span class="anchor" id="line-48"></span></li></ul><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">ECE238Spr08/20080310JohnNotes  (last edited 2008-03-10 09:07:25 by <span title="JohnHarrison @ 156.26.67.150[156.26.67.150]"><a href="/cratel/JohnHarrison" title="JohnHarrison @ 156.26.67.150[156.26.67.150]">JohnHarrison</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/cratel/ECE238Spr08/20080310JohnNotes?action=info">Info</a></li><li><a href="/cratel/ECE238Spr08/20080310JohnNotes?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="EmailActivation">Email Activation</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

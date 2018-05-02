@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>ECE238Spr08/Assignments/HelloNoise - CRATEL Wiki</title>
+<script type="text/javascript" src="/wiki/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/wiki/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/wiki/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/wiki/modern/css/projection.css">
+
+<!-- css only for MSIE browsers -->
+<!--[if IE]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/msie.css">
+<![endif]-->
+
+
+
+<link rel="Start" href="/cratel/cratel">
+<link rel="Alternate" title="Wiki Markup" href="/cratel/ECE238Spr08/Assignments/HelloNoise?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/cratel/ECE238Spr08/Assignments/HelloNoise?action=print">
+<link rel="Up" href="/cratel/ECE238Spr08/Assignments">
+<link rel="Search" href="/cratel/FindPage">
+<link rel="Index" href="/cratel/TitleIndex">
+<link rel="Glossary" href="/cratel/WordIndex">
+<link rel="Help" href="/cratel/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/cratel/cratel"><img src="/wiki/common/cratel-old-logo.png" alt="CRATEL logo"></a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/cratel/ECE238Spr08/Assignments/HelloNoise?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a href="/cratel/ECE238Spr08">ECE238Spr08</a></li><li><a href="/cratel/ECE238Spr08/Assignments">Assignments</a></li><li><a class="backlink" title="Click to do a full-text search for this title" href="/cratel/ECE238Spr08/Assignments/HelloNoise?action=fullsearch&amp;value=linkto%3A%22ECE238Spr08/Assignments/HelloNoise%22&amp;context=180">HelloNoise</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/cratel/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/cratel/FindPage">FindPage</a></li><li class="wikilink"><a href="/cratel/HelpContents">HelpContents</a></li><li class="current"><a href="/cratel/ECE238Spr08/Assignments/HelloNoise">HelloNoise</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/cratel/ECE238Spr08/Assignments/HelloNoise?action=info">Info</a></li><li><a href="/cratel/ECE238Spr08/Assignments/HelloNoise?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="EmailActivation">Email Activation</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h1 id="head-55d8c661f1228daf251a4a0ba908dbb0b7065d32">Hello Noise</h1>
+<span class="anchor" id="line-2"></span><ul><li>write code intended as sound effects for your final project <span class="anchor" id="line-3"></span></li><li>have your sounds triggered by keypad input <span class="anchor" id="line-4"></span></li><li><p class="line862">assemble your code, test with the GameBoy emulator <span class="anchor" id="line-5"></span></li><li><p class="line862">submit both your source code and the GameBoy binary on the class blog under category "Hello Noise" <span class="anchor" id="line-6"></span></li><li>Due March 30 midnight <span class="anchor" id="line-7"></span></li></ul><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-8"></span>
+<h2 id="head-aacd0e71f827ff704f7804007ee7856937f33c81">Purpose</h2>
+<span class="anchor" id="line-9"></span><p class="line874">By completing this assignment you will understand: <span class="anchor" id="line-10"></span><ul><li><p class="line862">the basics of GameBoy audio <span class="anchor" id="line-11"></span></li><li><p class="line862">the 2 PWM GameBoy voices <span class="anchor" id="line-12"></span></li><li><p class="line862">the wave playing GameBoy voice <span class="anchor" id="line-13"></span></li><li><p class="line862">the noise-making GameBoy voice <span class="anchor" id="line-14"></span></li></ul><p class="line867">
+<h2 id="head-052dcfc550d918a58ddcf3682e491aa998fbbd4b">Assignment Details</h2>
+<span class="anchor" id="line-15"></span><ul><li><p class="line862">Read <a class="http" href="http://cratel.wichita.edu/cratel/ECE238Spr08/references?action=AttachFile&amp;do=get&amp;target=gbspec.txt">gbspec.txt</a> lines 791 -847. <span class="anchor" id="line-16"></span></li><li><p class="line862">Read <a class="http" href="http://cratel.wichita.edu/cratel/ECE238Spr08/references?action=AttachFile&amp;do=get&amp;target=gbspec.txt">gbspec.txt</a> lines 1185 - 1524. <span class="anchor" id="line-17"></span></li><li><p class="line862">Read <a href="/cratel/ECE238Spr08/tutorials/GameBoyAudioSamples">Playing Audio Samples on the GameBoy</a> <span class="anchor" id="line-18"></span></li><li><p class="line862">Read <a href="/cratel/ECE238Spr08/software">gbhw-snd.inc</a>. Use this .inc file as a self-documenting way to incorporate sound in your code <span class="anchor" id="line-19"></span></li><li><p class="line862">Experiment with <a href="/cratel/ECE238Spr08/software">hello-noise.asm</a> as a demo of some of the audio capabilities of the GameBoy <span class="anchor" id="line-20"></span></li><li><p class="line862">Write code which uses <a href="/cratel/ECE238Spr08/software">gbhw-snd.inc</a> to create some of the sound effects you plan to use for your final project. <span class="anchor" id="line-21"></span><ul><li><p class="line862">as usual, you are welcome to look at <a class="http" href="http://cratel.wichita.edu/blogs/assembly08/category/hello-noise/">somebody else's Hello Noise assignment for ideas</a>. <span class="anchor" id="line-22"></span></li></ul></li><li>make sure your name is in the comments in the first few lines of the code source. <span class="anchor" id="line-23"></span></li><li><p class="line862">post <em><strong>both your source and binary</strong></em> in one post on <a class="http" href="http://cratel.wichita.edu/blogs/assembly08">the class blog</a>. <span class="anchor" id="line-24"></span><ul><li>title the blog with your name <span class="anchor" id="line-25"></span></li><li>in the body of the blog, give a brief description of what your program does <span class="anchor" id="line-26"></span></li><li><p class="line862">if your program uses source files other than the ones that the original "Hello Noise" Gameboy assembly code uses, say what they are. If they are not available on <a href="/cratel/ECE238Spr08/software">the software page</a>, include them, in your post as well. <span class="anchor" id="line-27"></span></li><li>put them in the "Hello Noise" category of the blog <span class="anchor" id="line-28"></span></li></ul></li><li><p class="line862">you are encouraged to comment and even alter <a class="http" href="http://cratel.wichita.edu/blogs/assembly08/category/hello-noise/">other people's work</a>. <span class="anchor" id="line-29"></span><ul><li>If you have more than one "good idea" for altering the code, you can submit to the blog more than once. <span class="anchor" id="line-30"></span></li></ul></ul><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">ECE238Spr08/Assignments/HelloNoise  (last edited 2008-03-24 06:42:28 by <span title="JohnHarrison @ ip68-103-181-172.ks.ok.cox.net[68.103.181.172]"><a href="/cratel/JohnHarrison" title="JohnHarrison @ ip68-103-181-172.ks.ok.cox.net[68.103.181.172]">JohnHarrison</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/cratel/ECE238Spr08/Assignments/HelloNoise?action=info">Info</a></li><li><a href="/cratel/ECE238Spr08/Assignments/HelloNoise?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="EmailActivation">Email Activation</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

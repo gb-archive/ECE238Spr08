@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Attachments for "ECE238Spr08/software" - CRATEL Wiki</title>
+<script type="text/javascript" src="/wiki/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/wiki/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/wiki/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/wiki/modern/css/projection.css">
+
+<!-- css only for MSIE browsers -->
+<!--[if IE]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/msie.css">
+<![endif]-->
+
+
+
+<link rel="Start" href="/cratel/cratel">
+<link rel="Alternate" title="Wiki Markup" href="/cratel/ECE238Spr08/software?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/cratel/ECE238Spr08/software?action=print">
+<link rel="Up" href="/cratel/ECE238Spr08">
+<link rel="Appendix" title="TEST8BIT.GBW" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=TEST8BIT.GBW">
+<link rel="Appendix" title="assemble.bat" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=assemble.bat">
+<link rel="Appendix" title="assemble.sh" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=assemble.sh">
+<link rel="Appendix" title="bigsprite.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=bigsprite.asm">
+<link rel="Appendix" title="easyScore.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=easyScore.asm">
+<link rel="Appendix" title="gbhw-snd.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw-snd.inc">
+<link rel="Appendix" title="gbhw.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc">
+<link rel="Appendix" title="gbrandom.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbrandom.asm">
+<link rel="Appendix" title="hello-angle.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-angle.asm">
+<link rel="Appendix" title="hello-bs.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-bs.asm">
+<link rel="Appendix" title="hello-noise-with-comments.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-noise-with-comments.asm">
+<link rel="Appendix" title="hello-noise.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-noise.asm">
+<link rel="Appendix" title="hello-random.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-random.asm">
+<link rel="Appendix" title="hello-score.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-score.asm">
+<link rel="Appendix" title="hello-sprite-good-delay.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite-good-delay.asm">
+<link rel="Appendix" title="hello-sprite-good-delay.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite-good-delay.inc">
+<link rel="Appendix" title="hello-sprite-no-interrupts.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite-no-interrupts.asm">
+<link rel="Appendix" title="hello-sprite.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite.asm">
+<link rel="Appendix" title="hello-sprite.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite.inc">
+<link rel="Appendix" title="hello-window.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-window.asm">
+<link rel="Appendix" title="hello-world-with-comments.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-world-with-comments.asm">
+<link rel="Appendix" title="hello-world.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-world.asm">
+<link rel="Appendix" title="ibmpc1.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc">
+<link rel="Appendix" title="incdecss.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=incdecss.inc">
+<link rel="Appendix" title="intmath.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=intmath.asm">
+<link rel="Appendix" title="keypad.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=keypad.asm">
+<link rel="Appendix" title="makelnk.bat" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=makelnk.bat">
+<link rel="Appendix" title="makelnk.sh" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=makelnk.sh">
+<link rel="Appendix" title="memory.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm">
+<link rel="Appendix" title="pacman.gbc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=pacman.gbc">
+<link rel="Appendix" title="powercat.z80" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=powercat.z80">
+<link rel="Appendix" title="print-number.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=print-number.asm">
+<link rel="Appendix" title="snd-playback-with-comments.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=snd-playback-with-comments.asm">
+<link rel="Appendix" title="snd-playback.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=snd-playback.asm">
+<link rel="Appendix" title="sprite.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=sprite.inc">
+<link rel="Appendix" title="standard-defs.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=standard-defs.inc">
+<link rel="Search" href="/cratel/FindPage">
+<link rel="Index" href="/cratel/TitleIndex">
+<link rel="Glossary" href="/cratel/WordIndex">
+<link rel="Help" href="/cratel/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/cratel/cratel"><img src="/wiki/common/cratel-old-logo.png" alt="CRATEL logo"></a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a id="login" href="/cratel/ECE238Spr08/software?action=login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li>Attachments for "ECE238Spr08/software"</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/cratel/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/cratel/FindPage">FindPage</a></li><li class="wikilink"><a href="/cratel/HelpContents">HelpContents</a></li><li class="current"><a href="/cratel/ECE238Spr08/software">ECE238Spr08/software</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/cratel/ECE238Spr08/software?action=info">Info</a></li><li><a href="/cratel/ECE238Spr08/software?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled class="disabled">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="EmailActivation">Email Activation</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div id="content">
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=TEST8BIT.GBW">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=TEST8BIT.GBW">view</a>] (8.9 KB) attachment:<strong>TEST8BIT.GBW</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=assemble.bat">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=assemble.bat">view</a>] (0.6 KB) attachment:<strong>assemble.bat</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=assemble.sh">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=assemble.sh">view</a>] (0.6 KB) attachment:<strong>assemble.sh</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=bigsprite.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=bigsprite.asm">view</a>] (13.5 KB) attachment:<strong>bigsprite.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=easyScore.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=easyScore.asm">view</a>] (4.3 KB) attachment:<strong>easyScore.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=gbhw-snd.inc">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw-snd.inc">view</a>] (9.0 KB) attachment:<strong>gbhw-snd.inc</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=gbhw.inc">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc">view</a>] (14.5 KB) attachment:<strong>gbhw.inc</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=gbrandom.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbrandom.asm">view</a>] (2.9 KB) attachment:<strong>gbrandom.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=hello-angle.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-angle.asm">view</a>] (8.1 KB) attachment:<strong>hello-angle.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=hello-bs.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-bs.asm">view</a>] (9.8 KB) attachment:<strong>hello-bs.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=hello-noise-with-comments.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-noise-with-comments.asm">view</a>] (19.3 KB) attachment:<strong>hello-noise-with-comments.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=hello-noise.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-noise.asm">view</a>] (13.7 KB) attachment:<strong>hello-noise.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=hello-random.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-random.asm">view</a>] (5.9 KB) attachment:<strong>hello-random.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=hello-score.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-score.asm">view</a>] (4.9 KB) attachment:<strong>hello-score.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=hello-sprite-good-delay.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite-good-delay.asm">view</a>] (8.5 KB) attachment:<strong>hello-sprite-good-delay.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=hello-sprite-good-delay.inc">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite-good-delay.inc">view</a>] (1.1 KB) attachment:<strong>hello-sprite-good-delay.inc</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=hello-sprite-no-interrupts.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite-no-interrupts.asm">view</a>] (7.3 KB) attachment:<strong>hello-sprite-no-interrupts.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=hello-sprite.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite.asm">view</a>] (7.5 KB) attachment:<strong>hello-sprite.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=hello-sprite.inc">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite.inc">view</a>] (1.2 KB) attachment:<strong>hello-sprite.inc</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=hello-window.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-window.asm">view</a>] (12.8 KB) attachment:<strong>hello-window.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=hello-world-with-comments.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-world-with-comments.asm">view</a>] (10.1 KB) attachment:<strong>hello-world-with-comments.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=hello-world.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-world.asm">view</a>] (3.7 KB) attachment:<strong>hello-world.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=ibmpc1.inc">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc">view</a>] (56.3 KB) attachment:<strong>ibmpc1.inc</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=incdecss.inc">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=incdecss.inc">view</a>] (1.7 KB) attachment:<strong>incdecss.inc</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=intmath.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=intmath.asm">view</a>] (1.8 KB) attachment:<strong>intmath.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=keypad.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=keypad.asm">view</a>] (1.5 KB) attachment:<strong>keypad.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=makelnk.bat">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=makelnk.bat">view</a>] (0.1 KB) attachment:<strong>makelnk.bat</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=makelnk.sh">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=makelnk.sh">view</a>] (0.1 KB) attachment:<strong>makelnk.sh</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=memory.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm">view</a>] (3.2 KB) attachment:<strong>memory.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=pacman.gbc">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=pacman.gbc">view</a>] (32.0 KB) attachment:<strong>pacman.gbc</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=powercat.z80">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=powercat.z80">view</a>] (1.2 KB) attachment:<strong>powercat.z80</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=print-number.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=print-number.asm">view</a>] (1.8 KB) attachment:<strong>print-number.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=snd-playback-with-comments.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=snd-playback-with-comments.asm">view</a>] (4.8 KB) attachment:<strong>snd-playback-with-comments.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=snd-playback.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=snd-playback.asm">view</a>] (3.3 KB) attachment:<strong>snd-playback.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=sprite.inc">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=sprite.inc">view</a>] (4.7 KB) attachment:<strong>sprite.inc</strong></li><li>[<a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=get&amp;target=standard-defs.inc">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=standard-defs.inc">view</a>] (1.5 KB) attachment:<strong>standard-defs.inc</strong></li></ul><p>You are not allowed to attach a file to this page.</p></div>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/cratel/ECE238Spr08/software?action=info">Info</a></li><li><a href="/cratel/ECE238Spr08/software?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled class="disabled">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="EmailActivation">Email Activation</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>ECE238Spr08/tutorials/GameBoyBigSprite - CRATEL Wiki</title>
+<script type="text/javascript" src="/wiki/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/wiki/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/wiki/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/wiki/modern/css/projection.css">
+
+<!-- css only for MSIE browsers -->
+<!--[if IE]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/msie.css">
+<![endif]-->
+
+
+
+<link rel="Start" href="/cratel/cratel">
+<link rel="Alternate" title="Wiki Markup" href="/cratel/ECE238Spr08/tutorials/GameBoyBigSprite?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/cratel/ECE238Spr08/tutorials/GameBoyBigSprite?action=print">
+<link rel="Up" href="/cratel/ECE238Spr08/tutorials">
+<link rel="Search" href="/cratel/FindPage">
+<link rel="Index" href="/cratel/TitleIndex">
+<link rel="Glossary" href="/cratel/WordIndex">
+<link rel="Help" href="/cratel/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/cratel/cratel"><img src="/wiki/common/cratel-old-logo.png" alt="CRATEL logo"></a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/cratel/ECE238Spr08/tutorials/GameBoyBigSprite?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a href="/cratel/ECE238Spr08">ECE238Spr08</a></li><li><a href="/cratel/ECE238Spr08/tutorials">tutorials</a></li><li><a class="backlink" title="Click to do a full-text search for this title" href="/cratel/ECE238Spr08/tutorials/GameBoyBigSprite?action=fullsearch&amp;value=linkto%3A%22ECE238Spr08/tutorials/GameBoyBigSprite%22&amp;context=180">GameBoyBigSprite</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/cratel/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/cratel/FindPage">FindPage</a></li><li class="wikilink"><a href="/cratel/HelpContents">HelpContents</a></li><li class="current"><a href="/cratel/ECE238Spr08/tutorials/GameBoyBigSprite">GameBoyBigSprite</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/cratel/ECE238Spr08/tutorials/GameBoyBigSprite?action=info">Info</a></li><li><a href="/cratel/ECE238Spr08/tutorials/GameBoyBigSprite?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="EmailActivation">Email Activation</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h1 id="head-95e8ef60ac3c10622c96de1d0f110b0b4b9f51f7">BigSprite</h1>
+<span class="anchor" id="line-2"></span><p class="line867">BigSprite is the beginnings of a library intended to make it easier to manipulate sprites. The purpose of BigSprite is: <span class="anchor" id="line-3"></span><ul><li>to easily combine up to 22 8x8 sprites into any size or shape you wish <span class="anchor" id="line-4"></span></li><li><p class="line862">once combined, the 8x8 sprites can function as one BigSprite, which can be easily moved as a unit etc. <span class="anchor" id="line-5"></span></li><li><p class="line891">BigSprite has built-in collision detection of other BigSprites and of background tiles using bounding boxes <span class="anchor" id="line-6"></span></li></ul><p class="line862">You don't have to know how BigSprite works to make good use of it. Just follow these directions and use the functions as described. You can also look at <a href="/cratel/ECE238Spr08/software">hello-bs.asm</a> as an example. <span class="anchor" id="line-7"></span>
+<h2 id="head-e97043eaad83effba3723d42793ff6449e2b196c">overview</h2>
+<span class="anchor" id="line-8"></span><ul><li><p class="line862">The BigSprite library reserves space for 32 BigSprites located from memory location $DC00 to $DFFF.  <span class="anchor" id="line-9"></span></li><li><p class="line862">Each BigSprite takes 32 bytes to describe. The bytes are as follows: <span class="anchor" id="line-10"></span><ul><li>1 byte: sprite ID <span class="anchor" id="line-11"></span><ul><li><p class="line862">the ID can be any 1-byte number you want, but should be unique for each BigSprite <span class="anchor" id="line-12"></span></li><li><p class="line862">since there are a maximum of 32 BigSprites, it would be possible to use 2 extra bits in this byte as flags <span class="anchor" id="line-13"></span></li></ul></li><li><p class="line862">2 bytes: location of BigSprite in upper left hand corner on screen (x,y) <span class="anchor" id="line-14"></span></li><li>4 bytes: bounding boxes (lowx, lowy, highx, highy) <span class="anchor" id="line-15"></span></li><li>2 bytes: sprite dimensions in terms of 8x8 sprites (x # of sprites, y # of sprites) <span class="anchor" id="line-16"></span></li><li><p class="line862">22 bytes: list of sprites used. (<em>must be 22 bytes even if 22 sprites aren't used</em>) <span class="anchor" id="line-17"></span></li><li>1 byte: flags (not yet implemented) <span class="anchor" id="line-18"></span></li></ul></li><li><p class="line862">blank BigSprites are loaded with <tt>BSEMPTY</tt> (currently $ff) <span class="anchor" id="line-19"></span></li><li><p class="line862">for simplicity, the BigSprite library creates 32 8x8 sprites numbered 0 through 31 and sets each of these sprites to its corresponding tile number i.e. sprite 0 is loaded with tile 0, sprite 1 with tile 1, etc.  <span class="anchor" id="line-20"></span></li></ul><p class="line867">
+<h2 id="head-8499a2b4eb6c841967fa3171bb04df66d9830c82">usage</h2>
+<span class="anchor" id="line-21"></span><p class="line867">
+<h3 id="head-eec58fed27f71adb9ae92dad54e19cb335a7435e">create your tiles</h3>
+<span class="anchor" id="line-22"></span><ul><li>create tiles for your sprite using GBDT or whatever <span class="anchor" id="line-23"></span></li><li>design your tiles using any dimensions you wish, but for simplicity export them as 8x8 <span class="anchor" id="line-24"></span></li><li><p class="line862">it's easiest if you number your tiles for BigSprite starting with tile 0 <span class="anchor" id="line-25"></span></li><li><p class="line862">it is easiest if there is a unique tile for every part of every BigSprite <span class="anchor" id="line-26"></span><ul><li>if a particular tile is needed more than once for your design, duplicate it <span class="anchor" id="line-27"></span></li><li><p class="line862">if a particular BigSprite will appear more than 1 time, duplicate all of its tiles <span class="anchor" id="line-28"></span></li></ul></li></ul><p class="line867">
+<h3 id="head-dc077e293b8eac8746617f44aaa3153299b08b4d">edit bigsprite.asm</h3>
+<span class="anchor" id="line-29"></span><ul><li><p class="line862">replace the example hardcoded BigSprite descriptions at the beginning of the file with your hardcoded BigSprite descriptions <span class="anchor" id="line-30"></span><ul><li><p class="line862">each description needs to be 32 bytes and needs to follow exactly the byte layout described above (also shown in the example descriptions inside <tt>bigsprite.asm</tt>) <span class="anchor" id="line-31"></span></li></ul></li><li><p class="line862">edit the number of hardcoded BigSprite descriptions EQUed with <tt>HARDCODEDBSES</tt> <span class="anchor" id="line-32"></span></li></ul><p class="line867">
+<h3 id="head-94c0026a652ac8aa5d2e8fc4a4a745ea528f23fe">edit your code</h3>
+<span class="anchor" id="line-33"></span><ul><li><p class="line862">add <tt>INCLUDE&nbsp;"bigsprite.asm"</tt> in your code after a section statement. <span class="anchor" id="line-34"></span><ul><li><p class="line862">One good place for it might be right after <tt>INCLUDE&nbsp;"memory.asm"</tt> if you have that line <span class="anchor" id="line-35"></span></li><li><p class="line891"><tt>bigsprite.asm</tt> requires <tt>hello-sprite.inc</tt> so have the most recent version of that in your path as well <span class="anchor" id="line-36"></span></li></ul></li><li><p class="line862">at the end of your main code initialization add <span class="anchor" id="line-37"></span><pre>        INIT_BS</pre><span class="anchor" id="line-38"></span><ul><li><p class="line862">this calls a macro which sets up the BigSprite system <span class="anchor" id="line-39"></span></li></ul></li></ul><p class="line867">
+<h3 id="head-c4f0d4f836d128e073cc1809398745565fe49c1f">function calls and macros in the BigSprite library</h3>
+<span class="anchor" id="line-40"></span><ul><li><span class="anchor" id="line-41"></span><pre>        INIT_BS</pre><p class="line862">Initialize the BigSprite system<span class="anchor" id="line-42"></span><ul><li>initializes sprites 0-31 and assigns them to tiles 0-31 <span class="anchor" id="line-43"></span></li><li><p class="line862">loads hardcoded BigSprites <span class="anchor" id="line-44"></span></li><li><p class="line862">initializes the remaining BigSprite list as empty <span class="anchor" id="line-45"></span></li><li>add to the end of your initialization code, after the tiles are loaded and before the main loop <span class="anchor" id="line-46"></span></li></ul></li><li><span class="anchor" id="line-47"></span><pre>        SET_BS_LOC        &lt;BS ID&gt;,&lt;X coord&gt;,&lt;Y coord&gt;</pre><p class="line862">set the X and Y coords of a specified BigSprite<span class="anchor" id="line-48"></span><ul><li>input: <span class="anchor" id="line-49"></span><ul><li>BS ID can be any 8 bit number or any 8 bit register (a,b,c,d,e,h,l) <span class="anchor" id="line-50"></span></li><li>X coord and Y coord can be any 8 bit number or any 8 bit register except h or l <span class="anchor" id="line-51"></span></li></ul></li></ul></li><li><span class="anchor" id="line-52"></span><pre>        call              get_bs_param</pre><p class="line862">get coordinates of BigSprite location or of any corner of a bounding box<span class="anchor" id="line-53"></span><ul><li>input: <span class="anchor" id="line-54"></span><ul><li><p class="line862">a = BigSprite ID <span class="anchor" id="line-55"></span></li><li>b = specified parameter: one of the following constants: <span class="anchor" id="line-56"></span><ul><li><p class="line891"><tt>BB_UPPER_LEFT</tt>: upper left corner of bounding box <span class="anchor" id="line-57"></span></li><li><p class="line891"><tt>BB_UPPER_RIGHT</tt>: upper right corner of bounding box <span class="anchor" id="line-58"></span></li><li><p class="line891"><tt>BB_LOWER_LEFT</tt>: lower left corner of bounding box <span class="anchor" id="line-59"></span></li><li><p class="line891"><tt>BB_LOWER_RIGHT</tt>: lower right corner of bounding box <span class="anchor" id="line-60"></span></li><li><p class="line891"><tt>BS_LOCATION</tt>: BigSprite screen location <span class="anchor" id="line-61"></span></li></ul></li></ul></li><li>output: d: x coordinate (pixels), e: y coordinate (pixels) <span class="anchor" id="line-62"></span></li></ul></li><li><span class="anchor" id="line-63"></span><pre>        call              BSCheck4Clison</pre><p class="line862">test if 2 BigSprites are colliding<span class="anchor" id="line-64"></span><ul><li><p class="line862">input: h = BigSprite 1 ID, l = BigSprite 2 ID <span class="anchor" id="line-65"></span></li><li><p class="line862">output: c flag is set if BigSprites are colliding, otherwise is reset <span class="anchor" id="line-66"></span></li></ul></li><li><span class="anchor" id="line-67"></span><pre>        call              bs_get_background_tile</pre>return tile # of background tile touching specified corner of a bounding box<span class="anchor" id="line-68"></span><ul><li><p class="line862">a = BigSprite ID <span class="anchor" id="line-69"></span></li><li>b = specified parameter: one of the following constants: <span class="anchor" id="line-70"></span><ul><li><p class="line891"><tt>BB_UPPER_LEFT</tt>: upper left corner of bounding box <span class="anchor" id="line-71"></span></li><li><p class="line891"><tt>BB_UPPER_RIGHT</tt>: upper right corner of bounding box <span class="anchor" id="line-72"></span></li><li><p class="line891"><tt>BB_LOWER_LEFT</tt>: lower left corner of bounding box <span class="anchor" id="line-73"></span></li><li><p class="line891"><tt>BB_LOWER_RIGHT</tt>: lower right corner of bounding box <span class="anchor" id="line-74"></span></li></ul></li><li>hl: Background tile map location in memory. Will always be either _SCRN0 ($9800) or _SCRN1 ($9C00) <span class="anchor" id="line-75"></span></li></ul><ul><li>output: a = tile number hitting specified corner <span class="anchor" id="line-76"></span></li><li><p class="line891"><strong>note:</strong> in its current implementation, this routine waits for VBLANK, since it cannot read video memory at any other time. This could (should?) be rewritten at some point to instead integrate with the VBLANK interrupt. <span class="anchor" id="line-77"></span></li></ul></li></ul><p class="line867">
+<h3 id="head-a166dbda46434bd160c489ac79d2d3a660332d01">function calls and macros associated with the BigSprite library</h3>
+<span class="anchor" id="line-78"></span><ul><li><span class="anchor" id="line-79"></span><pre>        SetSpriteTileNum    &lt;sprite # or name&gt;,&lt;tile #&gt;</pre> set tile # of a specified sprite<span class="anchor" id="line-80"></span><ul><li><p class="line862">technically, <tt>SetSpriteTileNum</tt> is not part of the BigSprite library, but is instead part of <tt>sprite.inc</tt>, a dependency of BigSprite. It is mentioned here because of its obvious use with the BigSprite library. By design, the BigSprite library loads sprites 0-31 with corresponding tiles 0-31. This means that sprite 0 is automatically loaded with tile 0, sprite 1 is automatically loaded with tile 1, etc. However, using <tt>SetSpriteTileNum</tt>, the sprites can be loaded with other tiles instead. <span class="anchor" id="line-81"></span></li><li><p class="line862">always call this macro AFTER calling <tt>INIT_BS</tt>, since <tt>INIT_BS</tt> will redefine each sprite to be associated with its current tile # as explained above. <span class="anchor" id="line-82"></span></li><li><p class="line891">&lt;sprite # or name&gt; may be either a sprite # (0,1,2,etc.) or a name of a sprite as defined by <tt>SpriteAttr</tt> in <tt>sprite.inc</tt> <span class="anchor" id="line-83"></span></li></ul></ul><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">ECE238Spr08/tutorials/GameBoyBigSprite  (last edited 2008-04-27 21:37:45 by <span title="JohnHarrison @ ip68-103-181-172.ks.ok.cox.net[68.103.181.172]"><a href="/cratel/JohnHarrison" title="JohnHarrison @ ip68-103-181-172.ks.ok.cox.net[68.103.181.172]">JohnHarrison</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/cratel/ECE238Spr08/tutorials/GameBoyBigSprite?action=info">Info</a></li><li><a href="/cratel/ECE238Spr08/tutorials/GameBoyBigSprite?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="EmailActivation">Email Activation</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

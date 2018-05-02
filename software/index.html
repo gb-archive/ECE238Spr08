@@ -1,0 +1,514 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>ECE238Spr08/software - CRATEL Wiki</title>
+<script type="text/javascript" src="/wiki/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/wiki/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/wiki/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/wiki/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="CRATEL Wiki: ECE238Spr08/software" href="/cratel/ECE238Spr08/software?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=ECE238Spr08%2Fsoftware&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="/cratel/cratel">
+<link rel="Alternate" title="Wiki Markup" href="/cratel/ECE238Spr08/software?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/cratel/ECE238Spr08/software?action=print">
+<link rel="Up" href="/cratel/ECE238Spr08">
+<link rel="Appendix" title="TEST8BIT.GBW" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=TEST8BIT.GBW">
+<link rel="Appendix" title="assemble.bat" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=assemble.bat">
+<link rel="Appendix" title="assemble.sh" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=assemble.sh">
+<link rel="Appendix" title="bigsprite.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=bigsprite.asm">
+<link rel="Appendix" title="easyScore.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=easyScore.asm">
+<link rel="Appendix" title="gbhw-snd.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw-snd.inc">
+<link rel="Appendix" title="gbhw.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc">
+<link rel="Appendix" title="gbrandom.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbrandom.asm">
+<link rel="Appendix" title="hello-angle.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-angle.asm">
+<link rel="Appendix" title="hello-bs.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-bs.asm">
+<link rel="Appendix" title="hello-noise-with-comments.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-noise-with-comments.asm">
+<link rel="Appendix" title="hello-noise.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-noise.asm">
+<link rel="Appendix" title="hello-random.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-random.asm">
+<link rel="Appendix" title="hello-score.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-score.asm">
+<link rel="Appendix" title="hello-sprite-good-delay.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite-good-delay.asm">
+<link rel="Appendix" title="hello-sprite-good-delay.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite-good-delay.inc">
+<link rel="Appendix" title="hello-sprite-no-interrupts.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite-no-interrupts.asm">
+<link rel="Appendix" title="hello-sprite.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite.asm">
+<link rel="Appendix" title="hello-sprite.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite.inc">
+<link rel="Appendix" title="hello-window.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-window.asm">
+<link rel="Appendix" title="hello-world-with-comments.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-world-with-comments.asm">
+<link rel="Appendix" title="hello-world.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-world.asm">
+<link rel="Appendix" title="ibmpc1.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc">
+<link rel="Appendix" title="incdecss.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=incdecss.inc">
+<link rel="Appendix" title="intmath.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=intmath.asm">
+<link rel="Appendix" title="keypad.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=keypad.asm">
+<link rel="Appendix" title="makelnk.bat" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=makelnk.bat">
+<link rel="Appendix" title="makelnk.sh" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=makelnk.sh">
+<link rel="Appendix" title="memory.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm">
+<link rel="Appendix" title="pacman.gbc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=pacman.gbc">
+<link rel="Appendix" title="powercat.z80" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=powercat.z80">
+<link rel="Appendix" title="print-number.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=print-number.asm">
+<link rel="Appendix" title="snd-playback-with-comments.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=snd-playback-with-comments.asm">
+<link rel="Appendix" title="snd-playback.asm" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=snd-playback.asm">
+<link rel="Appendix" title="sprite.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=sprite.inc">
+<link rel="Appendix" title="standard-defs.inc" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=standard-defs.inc">
+<link rel="Search" href="/cratel/FindPage">
+<link rel="Index" href="/cratel/TitleIndex">
+<link rel="Glossary" href="/cratel/WordIndex">
+<link rel="Help" href="/cratel/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/cratel/cratel"><img src="/wiki/common/cratel-old-logo.png" alt="CRATEL logo"></a></div>
+
+<form id="searchform" method="get" action="/cratel/ECE238Spr08/software">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/cratel/ECE238Spr08/software?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a href="/cratel/ECE238Spr08">ECE238Spr08</a></li><li><a class="backlink" href="/cratel/ECE238Spr08/software?action=fullsearch&amp;context=180&amp;value=linkto%3A%22ECE238Spr08%2Fsoftware%22" rel="nofollow" title="Click to do a full-text search for this title">software</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/cratel/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/cratel/FindPage">FindPage</a></li><li class="wikilink"><a href="/cratel/HelpContents">HelpContents</a></li><li class="current"><a href="/cratel/ECE238Spr08/software">ECE238Spr08/software</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="/cratel/ECE238Spr08/software?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="/cratel/ECE238Spr08/software?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/cratel/ECE238Spr08/software">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="EmailActivation">EmailActivation</option>
+<option value="Load">Load</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h1 id="Software">Software</h1>
+<span class="anchor" id="line-2"></span><p class="line867"><em>all Win32 software works in 98 through Vista</em> <span class="anchor" id="line-3"></span>
+<h2 id="Development_Tools">Development Tools</h2>
+<span class="anchor" id="line-4"></span><div><table><tbody><tr>  <td><p class="line891"><strong>category</strong></td>
+  <td><p class="line891"><strong>OS</strong></td>
+  <td><p class="line891"><strong>supported in class</strong></td>
+  <td><p class="line891"><strong>name/link</strong></td>
+  <td><p class="line891"><strong>description/notes</strong></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-5"></span><p class="line862">Assembler/Linker</td>
+  <td><p class="line862">Win32</td>
+  <td><p class="line862">yes</td>
+  <td><p class="line862">RGBDS <a class="http" href="http://www.rift.dk/download.php?view.11">original site</a> <a class="http" href="http://www.opusgames.com/games/GBDev/zips/RGBDS95_110e.zip">copy</a></td>
+  <td><p class="line862">Rednex GameBoy Development System</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-6"></span><p class="line862">Assembler/Linker</td>
+  <td><p class="line862">OSX</td>
+  <td><p class="line862"> </td>
+  <td><p class="line891"><a class="http" href="http://www.pepinismo.net/game-boy-assembler-suite-rgbds-for-mac-os-x/">RGBDS</a></td>
+  <td><p class="line862">Rednex GameBoy Development System</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-7"></span><p class="line862">Assembler/Linker</td>
+  <td><p class="line862">Linux</td>
+  <td><p class="line862"> </td>
+  <td><p class="line862">RGBDS <a class="http" href="http://www.devrs.com/gb/files/rgbds-linux-Makefile_110e.tar.gz">(makefile and binaries)</a> <a class="http" href="http://www.rift.dk/download.php?view.12">(source)</a></td>
+  <td><p class="line862">Rednex GameBoy Development System</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-8"></span><p class="line862">batch script</td>
+  <td><p class="line862">Win32</td>
+  <td><p class="line862">yes</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=assemble.bat" title="assemble.bat">assemble.bat</a></td>
+  <td><p class="line862">simple DOS script to automatically assemble and link code. Requires <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=makelnk.bat" title="">makelnk.bat</a></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-9"></span><p class="line862">batch script</td>
+  <td><p class="line862">Win32</td>
+  <td><p class="line862">yes</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=makelnk.bat" title="">makelnk.bat</a></td>
+  <td><p class="line862">make a .lnk file, required by <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=assemble.bat" title="">assemble.bat</a></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-10"></span><p class="line862">bash script</td>
+  <td><p class="line862">Linux</td>
+  <td><p class="line862"> </td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=assemble.sh" title="assemble.sh">assemble.sh</a></td>
+  <td><p class="line862">simple BASH script to automatically assemble and link code. Requires <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=makelnk.sh" title="">makelnk.sh</a></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-11"></span><p class="line862">bash script</td>
+  <td><p class="line862">Linux</td>
+  <td><p class="line862"> </td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=makelnk.sh" title="">makelnk.sh</a></td>
+  <td><p class="line862">make a .lnk file, required by <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=assemble.sh" title="">assemble.sh</a></td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line867">
+<h2 id="Emulators">Emulators</h2>
+<span class="anchor" id="line-14"></span><div><table><tbody><tr>  <td><p class="line891"><strong>OS</strong></td>
+  <td><p class="line891"><strong>supported in class</strong></td>
+  <td><p class="line891"><strong>name/link</strong></td>
+  <td><p class="line891"><strong>description/notes</strong></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-15"></span><p class="line862">Win32</td>
+  <td><p class="line862">yes</td>
+  <td><p class="line891"><a class="http" href="http://nocash.emubase.de/gmb.htm">no$gmb</a></td>
+  <td><p class="line862">nocash gameboy emulator/debugger for dos/windows. Also runs well in Wine under Linux.</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-16"></span><p class="line862">Linux and others</td>
+  <td><p class="line862"> </td>
+  <td><p class="line891"><a class="http" href="http://vba.ngemu.com/index.shtml">VisualBoy Advance</a></td>
+  <td><p class="line862">no debugger, and doesn't run as well as no$gmb, even on Linux.</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><p class="line867">
+<h2 id="GameBoy_Design_Utilities">GameBoy Design Utilities</h2>
+<span class="anchor" id="line-19"></span><div><table><tbody><tr>  <td><p class="line891"><strong>OS</strong></td>
+  <td><p class="line891"><strong>supported in class</strong></td>
+  <td><p class="line891"><strong>name/link</strong></td>
+  <td><p class="line891"><strong>description/notes</strong></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-20"></span><p class="line862">Win32</td>
+  <td><p class="line862">limited</td>
+  <td><p class="line891"><a class="http" href="http://www.devrs.com/gb/hmgd/gbtd.html">GameBoy Tile Designer</a></td>
+  <td><p class="line862">Design tiles and export them. Works with GameBoy Map Builder</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-21"></span><p class="line862">Win32</td>
+  <td><p class="line862">limited</td>
+  <td><p class="line891"><a class="http" href="http://www.devrs.com/gb/hmgd/gbmb.html">GameBoy Map Builder</a></td>
+  <td><p class="line862">Design background maps</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-22"></span><p class="line862">Win32</td>
+  <td><p class="line862"> </td>
+  <td><p class="line891"><a class="http" href="http://www.modplug.com/index.php">MODPlugTracker</a></td>
+  <td><p class="line862">make MOD files playable on the GB by the Lemon Player</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-23"></span><p class="line867">
+<h2 id="Editors">Editors</h2>
+<span class="anchor" id="line-24"></span><div><table><tbody><tr>  <td><p class="line891"><strong>OS</strong></td>
+  <td><p class="line891"><strong>supported in class</strong></td>
+  <td><p class="line891"><strong>name/link</strong></td>
+  <td><p class="line891"><strong>description/notes</strong></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-25"></span><p class="line862">Win32/Linux</td>
+  <td><p class="line862"> </td>
+  <td><p class="line891"><a class="http" href="http://www.scintilla.org/SciTE.html">SciTE</a></td>
+  <td><p class="line862">nice open-source editor which can be run from one executable --- works well with removable media</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-26"></span><p class="line862">Win32</td>
+  <td><p class="line862"> </td>
+  <td><p class="line891"><a class="http" href="http://www.crimsoneditor.com/">Crimson editor</a></td>
+  <td><p class="line862">nice, simple editor. Appears to be no longer maintained.</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-27"></span><p class="line867">
+<h2 id="Source_Code">Source Code</h2>
+<span class="anchor" id="line-28"></span><div><table><tbody><tr>  <td><p class="line891"><strong>supported in class</strong></td>
+  <td><p class="line891"><strong>name/link</strong></td>
+  <td><p class="line891"><strong>description/notes</strong></td>
+  <td><p class="line891"><strong>last update</strong></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-29"></span><p class="line862">yes</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-world.asm" title="Hello World">Hello World</a></td>
+  <td><p class="line862">Example "hello world" assembler code for the GameBoy. Requires <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a>, (all from <a class="http" href="http://devrs.com/gb/files/galp.zip">GALP v1.0</a>)</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-30"></span><p class="line862">yes</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-world-with-comments.asm" title="Hello World (tutorial comments)">Hello World (tutorial comments)</a></td>
+  <td><p class="line862">Same GameBoy Assembly source code as the "hello world" example above, but with many tutorial comments taken from <a class="http" href="http://devrs.com/gb/files/galp.zip">GALP v1.0</a>. Requires <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a>, (all also from GALP)</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-31"></span><p class="line862">yes</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite-no-interrupts.asm" title="">hello-sprite-no-interrupts.asm</a></td>
+  <td><p class="line891">GameBoy Assembly source code introducing sprites and assembler commands. This version does not use interrupts. Look at it <strong>first</strong> as your sprite example. Requires <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite.inc" title="">hello-sprite.inc</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-33"></span><p class="line862">yes</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite.asm" title="">hello-sprite.asm</a></td>
+  <td><p class="line891">GameBoy Assembly source code introducing sprites, interrupts, and assembler commands. Look at it <strong>second</strong> as your sprite example. Requires <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=sprite.inc" title="">sprite.inc</a></td>
+  <td><p class="line862">2008-May-01</td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-35"></span><p class="line862">yes</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite-good-delay.asm" title="">hello-sprite-good-delay.asm</a></td>
+  <td><p class="line891">GameBoy Assembly source code introducing sprites, interrupts, and assembler commands. This version uses interrupts and the built-in GameBoy timer to make a delay which is constant regardless of the speed of the GameBoy CPU. Look at it <strong>third</strong> as your sprite example. Requires <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite-good-delay.inc" title="">hello-sprite-good-delay.inc</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-36"></span><p class="line862">yes</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite.inc" title="">hello-sprite.inc</a></td>
+  <td><p class="line862">Include file for <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-sprite.asm" title="">hello-sprite.asm</a></td>
+  <td><p class="line862">2008-Mar-23</td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-38"></span><p class="line862">yes</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=powercat.z80" title="">powercat.z80</a></td>
+  <td><p class="line862">Justin Bollig's 32x16 pixel (4x2 sprite) powercat tiles. Used in <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-bs.asm" title="">hello-bs.asm</a></td>
+  <td><p class="line862">2008-Apr-15</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-39"></span><p class="line862">yes</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a></td>
+  <td><p class="line891">GameBoy hardware defs (assembler code), taken from <a class="http" href="http://devrs.com/gb/files/galp.zip">GALP v1.0</a>.</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-40"></span><p class="line862">yes</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a></td>
+  <td><p class="line862">ASCII character set as tiles/assembler for the GameBoy, taken from <a class="http" href="http://devrs.com/gb/files/galp.zip">GALP v1.0</a>.</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-41"></span><p class="line862">yes</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a></td>
+  <td><p class="line862">memory manipulation library for the GameBoy, taken from <a class="http" href="http://devrs.com/gb/files/galp.zip">GALP v1.0</a>.</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-42"></span><p class="line862">yes</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=incdecss.inc" title="">incdecss.inc</a></td>
+  <td><p class="line862">increment and decrement the 16 bit register pairs without trashing the GameBoy sprite RAM by using these macros</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-43"></span><p class="line862">yes</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=snd-playback.asm" title="">snd-playback.asm</a> or <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=snd-playback-with-comments.asm" title="with tutorial comments">with tutorial comments</a></td>
+  <td><p class="line862">play 4-bit audio samples at 8192Hz. Yowsa! Requires <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw-snd.inc" title="">gbhw-snd.inc</a> and <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>. Choose with or without tutorial comments.</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-44"></span><p class="line862">yes</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=TEST8BIT.GBW" title="">TEST8BIT.GBW</a></td>
+  <td><p class="line862">binary raw audio sample, GameBoy format. Used by <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-noise.asm" title="">hello-noise.asm</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-45"></span><p class="line862"> </td>
+  <td><p class="line891"><a class="http" href="http://members.fortunecity.com/lemon26/">Lemon Music Player</a></td>
+  <td><p class="line862">Source code and Dos/Linux conversion utilities to play music on the GameBoy</td>
+  <td><p class="line862"> </td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-46"></span><p class="line867">
+<h2 id="Source_code_Libraries">Source code Libraries</h2>
+<span class="anchor" id="line-47"></span><div><table><tbody><tr>  <td><p class="line891"><strong>name</strong></td>
+  <td><p class="line891"><strong>demo code</strong></td>
+  <td><p class="line891"><strong>description/notes</strong></td>
+  <td><p class="line891"><strong>dependencies for demo code</strong></td>
+  <td><p class="line891"><strong>last update</strong></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-48"></span><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=incdecss.inc" title="">incdecss.inc</a></td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-random.asm" title="">hello-random.asm</a></td>
+  <td><p class="line862">increment and decrement the 16 bit register pairs without trashing the GameBoy sprite RAM by using these macros</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=standard-defs.inc" title="">standard-defs.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbrandom.asm" title="">gbrandom.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=print-number.asm" title="">print-number.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=keypad.asm" title="">keypad.asm</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-50"></span><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=print-number.asm" title="">print-number.asm</a></td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-random.asm" title="">hello-random.asm</a></td>
+  <td><p class="line862">print a nibble, byte or word in hex or bcd</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=standard-defs.inc" title="">standard-defs.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbrandom.asm" title="">gbrandom.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=print-number.asm" title="">print-number.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=keypad.asm" title="">keypad.asm</a></td>
+  <td><p class="line862">2008-Apr-8</td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-52"></span><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=standard-defs.inc" title="">standard-defs.inc</a></td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-random.asm" title="">hello-random.asm</a></td>
+  <td><p class="line862">define byte and word variables, ROM header, and other things that every program seems to need and isn't included in gbhw.inc</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=standard-defs.inc" title="">standard-defs.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbrandom.asm" title="">gbrandom.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=print-number.asm" title="">print-number.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=keypad.asm" title="">keypad.asm</a></td>
+  <td><p class="line862">2008-Mar-31</td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-54"></span><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbrandom.asm" title="">gbrandom.asm</a></td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-random.asm" title="">hello-random.asm</a></td>
+  <td><p class="line862">generate 16 bit random numbers given an initial seed</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=standard-defs.inc" title="">standard-defs.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbrandom.asm" title="">gbrandom.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=print-number.asm" title="">print-number.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=keypad.asm" title="">keypad.asm</a></td>
+  <td><p class="line862">2008-Apr-20</td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-56"></span><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=keypad.asm" title="">keypad.asm</a></td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-random.asm" title="">hello-random.asm</a></td>
+  <td><p class="line862">get keypad input, test for key, etc.</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=standard-defs.inc" title="">standard-defs.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbrandom.asm" title="">gbrandom.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=print-number.asm" title="">print-number.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=keypad.asm" title="">keypad.asm</a></td>
+  <td><p class="line862">2008-Mar-31</td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-58"></span><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=sprite.inc" title="">sprite.inc</a></td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-angle.asm" title="">hello-angle.asm</a></td>
+  <td><p class="line862">move a sprite in any direction using a sine lookup table</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=standard-defs.inc" title="">standard-defs.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=sprite.inc" title="">sprite.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=keypad.asm" title="">keypad.asm</a>,</td>
+  <td><p class="line862">2008-May-01</td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-60"></span><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=bigsprite.asm" title="">bigsprite.asm</a></td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-bs.asm" title="">hello-bs.asm</a></td>
+  <td><p class="line891"><a href="/cratel/ECE238Spr08/tutorials/GameBoyBigSprite">the BigSprite library</a>. Supports manipulation of groups of sprites as one as well as collision detection of sprites and background tiles.</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=sprite.inc" title="">sprite.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=powercat.z80" title="">powercat.z80</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=standard-defs.inc" title="">standard-defs.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=keypad.asm" title="">keypad.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=print-number.asm" title="">print-number.asm</a></td>
+  <td><p class="line862">2008-Apr-15</td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-62"></span><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw-snd.inc" title="">gbhw-snd.inc</a></td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-noise.asm" title="">hello-noise.asm</a> or <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-noise-with-comments.asm" title="with tutorial comments">with tutorial comments</a></td>
+  <td><p class="line891">GameBoy sound demo of all four sound circuits.</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw-snd.inc" title="">gbhw-snd.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=standard-defs.inc" title="">standard-defs.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=snd-playback.asm" title="">snd-playback.asm</a> <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=TEST8BIT.GBW" title="">TEST8BIT.GBW</a>.</td>
+  <td><p class="line862">2008-Apr-1</td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-64"></span><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=intmath.asm" title="">intmath.asm</a></td>
+  <td><p class="line862"> </td>
+  <td><p class="line862">integer math routines. Currently only supports 16bit/16bit divide.</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=standard-defs.inc" title="">standard-defs.inc</a></td>
+  <td><p class="line862">2008-Apr-8</td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-66"></span><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=easyScore.asm" title="">easyScore.asm</a></td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-score.asm" title="">hello-score.asm</a></td>
+  <td><p class="line862">A simple generic way to keep track of and display the score</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=standard-defs.inc" title="">standard-defs.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=print-number.asm" title="">print-number.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=keypad.asm" title="">keypad.asm</a></td>
+  <td><p class="line862">2008-May-01</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-67"></span><p class="line867">
+<h2 id="More_demo_code">More demo code</h2>
+<span class="anchor" id="line-68"></span><div><table><tbody><tr>  <td><p class="line891"><strong>demo code</strong></td>
+  <td><p class="line891"><strong>description/notes</strong></td>
+  <td><p class="line891"><strong>dependencies for demo code</strong></td>
+  <td><p class="line891"><strong>last update</strong></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-69"></span><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=hello-window.asm" title="">hello-window.asm</a></td>
+  <td><p class="line862">A modification of hello-angle.asm to show how windows work on the GB</td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=gbhw.inc" title="">gbhw.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=ibmpc1.inc" title="">ibmpc1.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=standard-defs.inc" title="">standard-defs.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=sprite.inc" title="">sprite.inc</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=memory.asm" title="">memory.asm</a>, <a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=keypad.asm" title="">keypad.asm</a>,</td>
+  <td><p class="line862">2008-Apr-1</td>
+</tr>
+<p class="line891"></tbody></table></div><span class="anchor" id="line-71"></span><p class="line867">
+<h2 id="ROMS">ROMS</h2>
+<span class="anchor" id="line-72"></span><div><table><tbody><tr>  <td><p class="line891"><strong>category</strong></td>
+  <td><p class="line891"><strong>supported in class</strong></td>
+  <td><p class="line891"><strong>name/link</strong></td>
+  <td><p class="line891"><strong>description/notes</strong></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-73"></span><p class="line862">public domain game</td>
+  <td><p class="line862"> </td>
+  <td><p class="line891"><a class="attachment" href="/cratel/ECE238Spr08/software?action=AttachFile&amp;do=view&amp;target=pacman.gbc" title="Pacman">Pacman</a></td>
+  <td><p class="line862">GBC, public domain version, distributed by now-defunct <a class="http" href="http://en.wikipedia.org/wiki/Bung_Enterprises">Bung Enterprises</a></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-74"></span><p class="line862">music</td>
+  <td><p class="line862"> </td>
+  <td><p class="line891"><a class="http" href="http://aleksieeben.blogspot.com/2007/05/carillon-editor.html">Carillon Editor</a></td>
+  <td><p class="line862">Music editor which runs on Game Boy Color</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-75"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">ECE238Spr08/software  (last edited 2010-08-04 16:51:23 by <span title="??? @ localhost[127.0.0.1]">localhost</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="/cratel/ECE238Spr08/software?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="/cratel/ECE238Spr08/software?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/cratel/ECE238Spr08/software">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="EmailActivation">EmailActivation</option>
+<option value="Load">Load</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,382 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>ECE238Spr08/Assignments/TermProjectPhaseII/Demos - CRATEL Wiki</title>
+<script type="text/javascript" src="/wiki/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/wiki/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/wiki/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/wiki/modern/css/projection.css">
+
+<!-- css only for MSIE browsers -->
+<!--[if IE]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/msie.css">
+<![endif]-->
+
+
+
+<link rel="Start" href="/cratel/cratel">
+<link rel="Alternate" title="Wiki Markup" href="/cratel/ECE238Spr08/Assignments/TermProjectPhaseII/Demos?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/cratel/ECE238Spr08/Assignments/TermProjectPhaseII/Demos?action=print">
+<link rel="Up" href="/cratel/ECE238Spr08/Assignments/TermProjectPhaseII">
+<link rel="Search" href="/cratel/FindPage">
+<link rel="Index" href="/cratel/TitleIndex">
+<link rel="Glossary" href="/cratel/WordIndex">
+<link rel="Help" href="/cratel/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/cratel/cratel"><img src="/wiki/common/cratel-old-logo.png" alt="CRATEL logo"></a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/cratel/ECE238Spr08/Assignments/TermProjectPhaseII/Demos?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a href="/cratel/ECE238Spr08">ECE238Spr08</a></li><li><a href="/cratel/ECE238Spr08/Assignments">Assignments</a></li><li><a href="/cratel/ECE238Spr08/Assignments/TermProjectPhaseII">TermProjectPhaseII</a></li><li><a class="backlink" title="Click to do a full-text search for this title" href="/cratel/ECE238Spr08/Assignments/TermProjectPhaseII/Demos?action=fullsearch&amp;value=linkto%3A%22ECE238Spr08/Assignments/TermProjectPhaseII/Demos%22&amp;context=180">Demos</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/cratel/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/cratel/FindPage">FindPage</a></li><li class="wikilink"><a href="/cratel/HelpContents">HelpContents</a></li><li class="current"><a href="/cratel/ECE238Spr08/Assignments/TermProjectPhaseII/Demos">Demos</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/cratel/ECE238Spr08/Assignments/TermProjectPhaseII/Demos?action=info">Info</a></li><li><a href="/cratel/ECE238Spr08/Assignments/TermProjectPhaseII/Demos?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="EmailActivation">Email Activation</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h1 id="head-56f99246f55d83644959c456c2103faa52f5e84a">ECE238Spr08 Term Project Phase I Demos</h1>
+<span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h2 id="head-0c394599e38791dfe9aca54609104ea366b7ec40">Monday April 28</h2>
+<span class="anchor" id="line-4"></span><div><table><tbody><tr>  <td><p class="line891"><strong>#</strong></td>
+  <td><p class="line891"><strong>Student(s)</strong></td>
+  <td><p class="line891"><strong>project</strong></td>
+  <td><p class="line891"><strong>comments</strong></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-5"></span><p class="line862">1</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/03/alex-esparza/">Alex Esparza</a> &amp; <a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/01/instroduction/">Thinh Bui</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/07/alex-esparza-and-thinh-bui/">Hangman</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-7"></span><p class="line862">2</td>
+  <td><p class="line862">Scott Swank</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/09/project-proposal/">My Game</a></td>
+  <td><p class="line862">Monkey drops things</td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-9"></span><p class="line862">3</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/03/hello-blog/">Alex Siemer</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/09/project-proposal-alex-siemer/">Title Pending</a></td>
+  <td><p class="line862">downhill skier</td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-11"></span><p class="line862">4</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/09/daniel-schossow/">Daniel Schossow</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/08/daniel-schossow-3/">mini-games</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-13"></span><p class="line862">5</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/03/greg-nordyke/">Greg Nordyke</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/29/greg-nordyke-4/">Breakout</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-15"></span><p class="line862">6</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/03/angela-mccolm/">Angela Mccolm</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/09/angela-mccolm-project-proposal-tile-it/">Tile It!</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-17"></span><p class="line862">7</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/19/alex-martin/">Alex Martin</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/04/06/alex-martin-project-proposal-detailed/">2-d fighting game</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-19"></span><p class="line862">8</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/03/seng-cheong-lam/">Seng Cheong Lam</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/09/seng-cheong-lam-3/">Chopping</a></td>
+  <td><p class="line862">Dodgeball, first person</td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-21"></span><p class="line862">9</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/01/31/tharindu-kodikara/">Tharindu Kodikara Kankanamlage</a> &amp; <a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/03/thaovan-tran/">Thaovan Tran</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/09/thaovan-tran-project-proposal/">The King’s Message</a></td>
+  <td><p class="line862">traveling with a ship</td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-23"></span><p class="line862">10</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/03/august-ritchie/">August Ritchie</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/09/august-ritchie-3/">Earth Shatter</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-25"></span><p class="line862">11</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/01/31/23/">Jonathon Burris</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/08/429/">Not Mario</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-27"></span><p class="line862">12</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/03/hello-blog-again/">Justin Bollig</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/11/project-proposal-justin-bollig/">old school "Asteroids"</a></td>
+  <td><p class="line862"> </td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><p class="line867">
+<h2 id="head-48904a8d7fbf3d38d9c6bae5a81e522e26418cc7">Wed April 30</h2>
+<span class="anchor" id="line-30"></span><div><table><tbody><tr>  <td><p class="line891"><strong>#</strong></td>
+  <td><p class="line891"><strong>Student(s)</strong></td>
+  <td><p class="line891"><strong>project</strong></td>
+  <td><p class="line891"><strong>comments</strong></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-31"></span><p class="line862">1</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/01/alec-jahn/">Alec Jahn</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/10/alec-jahn-project-proposal/">GameBoy Synthesizer</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-33"></span><p class="line862">2</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/03/adam-wiebe/">Adam Wiebe</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/09/adam-wiebe-final-project-proposal/">chase</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-35"></span><p class="line862">3</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/19/tyler-tyson/">Tyler Tyson</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/09/tyler-tysons-project-proposalcops-and-robbers/">Cops and Robbers</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-37"></span><p class="line862">4</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/02/korey-kemnitz/">Korey Kemnitz</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/09/korey-kemnitz-4/">single-car racer</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-39"></span><p class="line862">5</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/01/josh-johnson/">Joshua Johnson</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/09/josh-johnson-project-proposal/">Miniature Golf</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-41"></span><p class="line862">6</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/01/30/clint-houchin/">Clinton Houchin</a> &amp; <a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/02/jeremy-james/">Jeremy James</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/09/jeremy-jamesclint-houchin-project/">UNTITLED music player</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-43"></span><p class="line862">7</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/01/31/william-livengood/">William Livengood</a></td>
+  <td><p class="line862">a maze something?</td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-45"></span><p class="line862">8</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/01/31/austin-patten/">Austin Patten</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/08/austin-patten-4/">JetPack</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-47"></span><p class="line862">9</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/04/matt-hart/">Matthew Hart</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/15/matt-hart-defender-clone/">Defender v0.1</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-49"></span><p class="line862">10</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/02/thomas-engdahl/">Thomas Engdahl</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/09/thomas-engdahl-3dtictactoe/">3D Tic-Tac-Toe</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-51"></span><p class="line862">11</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/03/andrew-stanton/">Andrew Stanton</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/09/andrewstanton-2/">Dungeon Crawlers</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<p class="line891"><tr>  <td><span class="anchor" id="line-53"></span><p class="line862">12</td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/02/02/corey-rink/">Corey Rink</a></td>
+  <td><p class="line891"><a class="http" href="http://cratel.wichita.edu/blogs/assembly08/2008/03/09/corey-rink-in-the-wind/">In The Wind</a></td>
+  <td><p class="line862"> </td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-54"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">ECE238Spr08/Assignments/TermProjectPhaseII/Demos  (last edited 2008-04-28 15:17:04 by <span title="JohnHarrison @ 156.26.121.227[156.26.121.227]"><a href="/cratel/JohnHarrison" title="JohnHarrison @ 156.26.121.227[156.26.121.227]">JohnHarrison</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/cratel/ECE238Spr08/Assignments/TermProjectPhaseII/Demos?action=info">Info</a></li><li><a href="/cratel/ECE238Spr08/Assignments/TermProjectPhaseII/Demos?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="EmailActivation">Email Activation</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

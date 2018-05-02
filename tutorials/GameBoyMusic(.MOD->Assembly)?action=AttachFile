@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Attachments for "ECE238Spr08/tutorials/GameBoyMusic(.MOD-&gt;Assembly)" - CRATEL Wiki</title>
+<script type="text/javascript" src="/wiki/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/wiki/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/wiki/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/wiki/modern/css/projection.css">
+
+<!-- css only for MSIE browsers -->
+<!--[if IE]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/wiki/modern/css/msie.css">
+<![endif]-->
+
+
+
+<link rel="Start" href="/cratel/cratel">
+<link rel="Alternate" title="Wiki Markup" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=print">
+<link rel="Up" href="/cratel/ECE238Spr08/tutorials">
+<link rel="Appendix" title="AlfGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=AlfGB.mp3">
+<link rel="Appendix" title="BoogieGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=BoogieGB.mp3">
+<link rel="Appendix" title="MariolandGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=MariolandGB.mp3">
+<link rel="Appendix" title="MusicPackage2.zip" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=MusicPackage2.zip">
+<link rel="Appendix" title="Playerfile3.asm" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=Playerfile3.asm">
+<link rel="Appendix" title="PopcornGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=PopcornGB.mp3">
+<link rel="Appendix" title="RideGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=RideGB.mp3">
+<link rel="Appendix" title="StarTrekGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=StarTrekGB.mp3">
+<link rel="Appendix" title="SuperMarioGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=SuperMarioGB.mp3">
+<link rel="Appendix" title="Tictacorder.inc" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=Tictacorder.inc">
+<link rel="Appendix" title="between2watersGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=between2watersGB.mp3">
+<link rel="Appendix" title="examplesong.asm" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=examplesong.asm">
+<link rel="Appendix" title="fastquestGB.mp3" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=fastquestGB.mp3">
+<link rel="Appendix" title="music.inc" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=music.inc">
+<link rel="Search" href="/cratel/FindPage">
+<link rel="Index" href="/cratel/TitleIndex">
+<link rel="Glossary" href="/cratel/WordIndex">
+<link rel="Help" href="/cratel/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/cratel/cratel"><img src="/wiki/common/cratel-old-logo.png" alt="CRATEL logo"></a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a id="login" href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li>Attachments for "ECE238Spr08/tutorials/GameBoyMusic(.MOD-&gt;Assembly)"</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/cratel/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/cratel/FindPage">FindPage</a></li><li class="wikilink"><a href="/cratel/HelpContents">HelpContents</a></li><li class="current"><a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29">GameBoyMusi...-&gt;Assembly)</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=info">Info</a></li><li><a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled class="disabled">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="EmailActivation">Email Activation</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div id="content">
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=AlfGB.mp3">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=AlfGB.mp3">view</a>] (2329.4 KB) attachment:<strong>AlfGB.mp3</strong></li><li>[<a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=BoogieGB.mp3">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=BoogieGB.mp3">view</a>] (1616.3 KB) attachment:<strong>BoogieGB.mp3</strong></li><li>[<a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=MariolandGB.mp3">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=MariolandGB.mp3">view</a>] (738.0 KB) attachment:<strong>MariolandGB.mp3</strong></li><li>[<a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=MusicPackage2.zip">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=MusicPackage2.zip">view</a>] (1725.2 KB) attachment:<strong>MusicPackage2.zip</strong></li><li>[<a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=Playerfile3.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=Playerfile3.asm">view</a>] (15.4 KB) attachment:<strong>Playerfile3.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=PopcornGB.mp3">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=PopcornGB.mp3">view</a>] (1777.1 KB) attachment:<strong>PopcornGB.mp3</strong></li><li>[<a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=RideGB.mp3">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=RideGB.mp3">view</a>] (2012.2 KB) attachment:<strong>RideGB.mp3</strong></li><li>[<a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=StarTrekGB.mp3">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=StarTrekGB.mp3">view</a>] (511.4 KB) attachment:<strong>StarTrekGB.mp3</strong></li><li>[<a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=SuperMarioGB.mp3">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=SuperMarioGB.mp3">view</a>] (1358.8 KB) attachment:<strong>SuperMarioGB.mp3</strong></li><li>[<a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=Tictacorder.inc">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=Tictacorder.inc">view</a>] (0.9 KB) attachment:<strong>Tictacorder.inc</strong></li><li>[<a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=between2watersGB.mp3">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=between2watersGB.mp3">view</a>] (1089.8 KB) attachment:<strong>between2watersGB.mp3</strong></li><li>[<a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=examplesong.asm">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=examplesong.asm">view</a>] (1.4 KB) attachment:<strong>examplesong.asm</strong></li><li>[<a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=fastquestGB.mp3">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=fastquestGB.mp3">view</a>] (1304.5 KB) attachment:<strong>fastquestGB.mp3</strong></li><li>[<a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=get&amp;target=music.inc">get</a>&nbsp;| <a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile&amp;do=view&amp;target=music.inc">view</a>] (3.5 KB) attachment:<strong>music.inc</strong></li></ul><p>You are not allowed to attach a file to this page.</p></div>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=info">Info</a></li><li><a href="/cratel/ECE238Spr08/tutorials/GameBoyMusic%28.MOD-%3EAssembly%29?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled class="disabled">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="EmailActivation">Email Activation</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+
